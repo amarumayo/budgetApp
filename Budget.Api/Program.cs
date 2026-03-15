@@ -3,7 +3,6 @@ using BudgetApp.Data;
 using BudgetApp.Mappings;
 using BudgetApp.Repositories;
 using BudgetApp.Repositories.Contracts;
-using BudgetApp.Repositories.Contracts;
 using BudgetApp.Services;
 using BudgetApp.Services.Contracts;
 using Microsoft.EntityFrameworkCore;
