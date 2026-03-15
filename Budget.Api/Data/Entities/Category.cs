@@ -3,7 +3,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Budget.Api.Data.Entities;
+namespace BudgetApp.Data.Entities;
 
 public partial class Category
 {

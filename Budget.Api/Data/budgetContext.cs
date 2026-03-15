@@ -2,14 +2,14 @@
 #nullable disable
 using System;
 using System.Collections.Generic;
-using Budget.Api.Data.Entities;
+using BudgetApp.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Budget.Api.Data;
+namespace BudgetApp.Data;
 
-public partial class budgetContext : DbContext
+public partial class BudgetContext : DbContext
 {
-    public budgetContext(DbContextOptions<budgetContext> options)
+    public BudgetContext(DbContextOptions<BudgetContext> options)
         : base(options)
     {
     }

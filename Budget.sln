@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36908.2 d17.14
+VisualStudioVersion = 17.14.36908.2
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Budget.Api", "Budget.Api\Budget.Api.csproj", "{A71E552B-D321-41B6-B015-FF79842C3349}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetApp", "Budget.Api\BudgetApp.csproj", "{A71E552B-D321-41B6-B015-FF79842C3349}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetApp.Tests", "BudgetApp.Tests\BudgetApp.Tests.csproj", "{3EBDC952-FEC8-4E1A-AED2-229CEC399A83}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{A71E552B-D321-41B6-B015-FF79842C3349}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A71E552B-D321-41B6-B015-FF79842C3349}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A71E552B-D321-41B6-B015-FF79842C3349}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EBDC952-FEC8-4E1A-AED2-229CEC399A83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EBDC952-FEC8-4E1A-AED2-229CEC399A83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EBDC952-FEC8-4E1A-AED2-229CEC399A83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EBDC952-FEC8-4E1A-AED2-229CEC399A83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
