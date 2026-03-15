@@ -1,6 +1,6 @@
-﻿namespace Budget.Models
+﻿namespace BudgetApp.Models
 {
-    public class CategoriesModel
+    public class CategoryModel
     {
         public int Id { get; set; }        
         public string Name { get; set; } = string.Empty;

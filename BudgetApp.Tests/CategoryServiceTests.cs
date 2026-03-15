@@ -1,5 +1,10 @@
-﻿using Budget.Api.Data.Entities;
-
+﻿using AutoMapper;
+using BudgetApp.Data.Entities;
+using BudgetApp.Models;
+using Moq;
+using BudgetApp.Repositories.Contracts;
+using BudgetApp.Services;
+using FluentAssertions;
 public class CategoryServiceTests
 {
     [Fact]

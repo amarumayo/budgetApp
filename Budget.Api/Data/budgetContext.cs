@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using Budget.Api.Data.Entities;
 using Microsoft.EntityFrameworkCore;
 
-namespace Budget.Api.Data;
+namespace Budget.Api.Data.Entities;
 
 public partial class budgetContext : DbContext
 {
