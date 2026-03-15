@@ -17,10 +17,11 @@ namespace BudgetApp.Services
             _mapper = mapper;
         }
 
-        public Task<IEnumerable<CategoryModel>> GetAllCategoriesAsync() 
+        public async Task<IEnumerable<CategoryModel>> GetAllCategoriesAsync() 
         {
-            throw new NotImplementedException();
-
+            var entities = await _repo.GetAllAsync();
+            var models = _mapper.Map<IEnumerable< CategoryModel>>(entities);
+            return models;
         }
     }
 }

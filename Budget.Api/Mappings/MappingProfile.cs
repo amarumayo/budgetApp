@@ -3,7 +3,7 @@ using BudgetApp.Models;
 using BudgetApp.Data.Entities;
 
 
-namespace Budget.Api.Mappings
+namespace BudgetApp.Mappings
 {
     public class MappingProfile : Profile
     {

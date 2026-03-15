@@ -1,8 +1,11 @@
 ﻿using BudgetApp.Services.Contracts;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Budget.Api.Controllers
+namespace BudgetApp.Controllers
 {
+
+    [ApiController]
+    [Route("api/[controller]")]
     public class CategoriesController : ControllerBase
     {
 
@@ -15,9 +18,10 @@ namespace Budget.Api.Controllers
         }
         [HttpGet]
 
-        public Task <IActionResult> GetAll()
+        public async Task <IActionResult> GetAllCategories()
         {
-            throw new NotImplementedException();
+            var categories = await _categoryService.GetAllCategoriesAsync();
+            return Ok(categories);
         }
     }
 }
