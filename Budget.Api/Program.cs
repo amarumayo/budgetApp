@@ -3,7 +3,6 @@ using BudgetApp.Data;
 using BudgetApp.Mappings;
 using BudgetApp.Repositories;
 using BudgetApp.Repositories.Contracts;
-using BudgetApp.Repositories.Contracts;
 using BudgetApp.Services;
 using BudgetApp.Services.Contracts;
 using Microsoft.EntityFrameworkCore;
@@ -23,15 +22,17 @@ var mapperConfig = new MapperConfiguration(cfg =>
     cfg.AddProfile<MappingProfile>();
 });
 
+// Automapper
 IMapper mapper = mapperConfig.CreateMapper();
 builder.Services.AddSingleton(mapper);
 
 
-// Dontexts
+// Contexts
 builder.Services.AddDbContext<BudgetContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Repositories
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<ICategoryRepository, CategoryRepository>();
 
 // Services
