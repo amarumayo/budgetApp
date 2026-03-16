@@ -2,8 +2,7 @@
 
 namespace BudgetApp.Repositories.Contracts
 {
-    public interface ICategoryRepository
+    public interface ICategoryRepository : IRepository<Category>
     {
-        Task<IEnumerable<Category>> GetAllAsync();
     }
 }
