@@ -27,6 +27,12 @@ namespace BudgetApp.Services
         public async Task<CategoryModel?> GetCategoryByIdAsync(int id)
         {
             var entity = await _repo.GetByIdAsync(id);
+
+            if (entity == null)
+            {
+                return null;
+            }
+
             var model = _mapper.Map<CategoryModel>(entity);
             return model;
         }
