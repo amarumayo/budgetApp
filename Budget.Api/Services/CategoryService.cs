@@ -23,5 +23,18 @@ namespace BudgetApp.Services
             var models = _mapper.Map<IEnumerable< CategoryModel>>(entities);
             return models;
         }
+
+        public async Task<CategoryModel?> GetCategoryByIdAsync(int id)
+        {
+            var entity = await _repo.GetByIdAsync(id);
+
+            if (entity == null)
+            {
+                return null;
+            }
+
+            var model = _mapper.Map<CategoryModel>(entity);
+            return model;
+        }
     }
 }
