@@ -16,11 +16,15 @@ namespace BudgetApp.Repositories
             _dbSet = context.Set<T>();
         }
 
-        public async Task<T?> GetByIdAsync(int id) =>
-            await _dbSet.FindAsync(id);
+        public async Task<T?> GetByIdAsync(int id)
+        {
+            return await _dbSet.FindAsync(id);
+        }
 
-        public async Task<IEnumerable<T>> GetAllAsync() =>
-            await _dbSet.ToListAsync();
+        public async Task<IEnumerable<T>> GetAllAsync()
+        {
+            return await _dbSet.ToListAsync();
+        }
 
         public async Task AddAsync(T entity) =>
             await _dbSet.AddAsync(entity);
@@ -28,8 +32,14 @@ namespace BudgetApp.Repositories
         public async Task Update(T entity) =>
             _dbSet.Update(entity);
         
-        public async Task Remove(T entity) =>
+        public void Delete(T entity)
+        {
             _dbSet.Remove(entity);
+        }
 
+        public Task SaveChangesAsync()
+        {
+            return _context.SaveChangesAsync();
+        }
     }
 }

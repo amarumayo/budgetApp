@@ -10,6 +10,8 @@
 
         Task Update(T entity);
 
-        Task Remove(T entity);
+        void Delete(T entity);
+
+        Task SaveChangesAsync();
     }
 }

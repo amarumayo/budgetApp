@@ -36,5 +36,20 @@ namespace BudgetApp.Services
             var model = _mapper.Map<CategoryModel>(entity);
             return model;
         }
+
+        public async Task<bool> DeleteCategoryAsync(int id)
+        {
+            var entity = await _repo.GetByIdAsync(id);
+
+            if (entity == null)
+            {
+                return false;
+            }
+
+            _repo.Delete(entity);
+            await _repo.SaveChangesAsync();
+
+            return true;
+        }
     }
 }

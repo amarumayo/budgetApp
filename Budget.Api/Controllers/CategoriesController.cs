@@ -36,5 +36,19 @@ namespace BudgetApp.Controllers
 
             return Ok(category);
         }
+
+
+        [HttpDelete("{id:int}")]
+        public async Task<IActionResult> DeleteCategoryById(int id)
+        {
+            var deleteSuccess = await _categoryService.DeleteCategoryAsync(id);
+
+            if (!deleteSuccess)
+            {
+                return NotFound();
+            }
+
+            return NoContent();
+        }
     }
 }

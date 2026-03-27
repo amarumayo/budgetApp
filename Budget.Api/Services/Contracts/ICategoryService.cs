@@ -7,5 +7,7 @@ namespace BudgetApp.Services.Contracts
         Task<IEnumerable<CategoryModel>> GetAllCategoriesAsync();
 
         Task<CategoryModel?> GetCategoryByIdAsync(int id);
-    }
+
+        Task<bool> DeleteCategoryAsync(int id);
+    } 
 }
